@@ -1,0 +1,39 @@
+Source: libcarton-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7), perl (>= 5.10) | libmodule-build-perl
+Build-Depends-Indep: perl (>= v5.8.500), libmodule-build-perl (>= 0.4004),
+  libmodule-metadata-perl (>= 1.000003),
+  libapp-fatpacker-perl (>= 0.009018), libcpan-meta-perl (>= 2.120921),
+  libpath-tiny-perl (>= 0.033), libgetopt-long-perl (>= 2.39),
+  libtry-tiny-perl (>= 0.09), libparent-perl (>= 0.223), libfile-pushd-perl,
+  libextutils-makemaker-perl (>= 6.64), libmoo-perl (>= 1.002),
+  libapp-cpanminus-perl (>= 1.694), libmodule-reader-perl (>= 0.002),
+  libexception-class-perl (>= 1.32), libmodule-cpanfile-perl (>= 0.9031),
+  libcpan-meta-requirements-perl (>= 2.121), libjson-perl (>= 2.53)
+Maintainer: Nathaniel Nutter <nnutter@genome.wustl.edu>
+Standards-Version: 3.8.3
+Homepage: http://search.cpan.org/dist/Carton/
+
+Package: libcarton-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, perl (>= v5.8.500),
+  libmodule-metadata-perl (>= 1.000003),
+  libapp-fatpacker-perl (>= 0.009018), libcpan-meta-perl (>= 2.120921),
+  libmodule-build-perl (>= 0.4004), libpath-tiny-perl (>= 0.033),
+  libgetopt-long-perl (>= 2.39), libtry-tiny-perl (>= 0.09),
+  libparent-perl (>= 0.223), libfile-pushd-perl,
+  libextutils-makemaker-perl (>= 6.64), libmoo-perl (>= 1.002),
+  libapp-cpanminus-perl (>= 1.694), libmodule-reader-perl (>= 0.002),
+  libexception-class-perl (>= 1.32), libmodule-cpanfile-perl (>= 0.9031),
+  libcpan-meta-requirements-perl (>= 2.121), libjson-perl (>= 2.53)
+Description: Perl module dependency manager (aka Bundler for Perl)
+ carton is a command line tool to track the Perl module dependencies for your
+ Perl application. Dependencies are declared using cpanfile format, and the
+ managed dependencies are tracked in a cpanfile.snapshot file, which is meant
+ to be version controlled, and the snapshot file allows other developers of
+ your application will have the exact same versions of the modules.
+ .
+ For cpanfile syntax, see cpanfile documentation.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
